@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f8f3ed">
+<title>Cafer & Fulya | Nişanımız</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600&display=swap');
+  :root{--bg:#f8f3ed;--paper:#fffdf9;--ink:#443b35;--gold:#a88355;--line:#d9c8b4;}
+  *{box-sizing:border-box}
+  body{margin:0;background:radial-gradient(circle at top,#fffdf9 0,#f8f3ed 55%,#f2e9df 100%);color:var(--ink);font-family:Montserrat,Arial,sans-serif;min-height:100vh}
+  .wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:28px 16px}
+  .card{position:relative;width:min(560px,100%);background:rgba(255,253,249,.94);border:1px solid rgba(168,131,85,.25);box-shadow:0 20px 70px rgba(68,59,53,.12);border-radius:28px;padding:52px 28px 38px;text-align:center;overflow:hidden}
+  .ornament{font-family:"Cormorant Garamond",serif;color:var(--gold);font-size:25px;letter-spacing:8px;margin-bottom:8px}
+  h1{font-family:"Cormorant Garamond",serif;font-size:68px;line-height:.88;font-weight:500;margin:0;color:#40372f}
+  .amp{font-size:42px;color:var(--gold);font-weight:400;display:block;margin:8px 0}
+  .date{margin:22px auto 30px;display:inline-block;padding:10px 22px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);letter-spacing:4px;font-size:12px}
+  .intro{font-family:"Cormorant Garamond",serif;font-size:25px;line-height:1.25;margin:0 auto 10px;max-width:420px}
+  .sub{font-size:13px;line-height:1.7;color:#756b63;max-width:410px;margin:0 auto 28px}
+  .upload{display:inline-flex;align-items:center;justify-content:center;gap:9px;width:100%;max-width:350px;padding:17px 22px;border-radius:999px;background:#a88355;color:white;text-decoration:none;font-size:13px;font-weight:600;letter-spacing:1px;box-shadow:0 9px 22px rgba(168,131,85,.22);transition:.2s}
+  .upload:hover{transform:translateY(-2px);filter:brightness(.98)}
+  .note{margin:14px auto 0;font-size:11px;color:#91867d;line-height:1.5}
+  .footer{margin-top:35px;font-family:"Cormorant Garamond",serif;font-size:18px;color:#8a6b49}
+  .petal{position:absolute;width:90px;height:90px;border:1px solid rgba(168,131,85,.15);border-radius:60% 40% 60% 40%;transform:rotate(35deg);opacity:.65}
+  .p1{top:-35px;left:-28px}.p2{bottom:-38px;right:-28px;transform:rotate(215deg)}
+  .settings{margin-top:30px;padding-top:20px;border-top:1px dashed var(--line);text-align:left;font-size:11px;color:#8b8178}
+  code{background:#f2ebe3;padding:2px 5px;border-radius:5px}
+  @media(max-width:420px){h1{font-size:58px}.card{padding:44px 22px 32px}.intro{font-size:23px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <main class="card">
+    <div class="petal p1"></div><div class="petal p2"></div>
+    <div class="ornament">✦ ❦ ✦</div>
+    <h1>Cafer <span class="amp">&amp;</span> Fulya</h1>
+    <div class="date">26 · 09 · 2026</div>
+
+    <p class="intro">Nişanımızdan güzel anılarınızı bizimle paylaşın 🤍</p>
+    <p class="sub">Bugün çektiğiniz fotoğraf ve videoları buradan bize ulaştırabilirsiniz. Her kare bizim için çok değerli.</p>
+
+    <!--
+      WICHTIG:
+      Ersetze den Link unten durch deinen kostenlosen Upload-Link.
+      Beispiel:
+      href="https://DEIN-UPLOAD-LINK..."
+    -->
+    <a class="upload" id="uploadButton" href="#" onclick="openUpload(event)">
+      📷 &nbsp; FOTOĞRAF / VİDEO YÜKLE
+    </a>
+    <div class="note">Fotoğraf ve videolarınızı yüklemek için butona dokunun.</div>
+
+    <div class="footer">Sevgiyle, Cafer &amp; Fulya 🤍</div>
+
+    <div class="settings">
+      <strong>Kurulum:</strong> Upload-Linkiniz hazır olduğunda, aşağıdaki
+      <code>UPLOAD_LINK</code> değerini değiştirin:
+      <br><br>
+      <code>const UPLOAD_LINK = "BURAYA_UPLOAD_LINKİNİ_YAPIŞTIR";</code>
+    </div>
+  </main>
+</div>
+
+<script>
+  const UPLOAD_LINK = "BURAYA_UPLOAD_LINKİNİ_YAPIŞTIR";
+
+  function openUpload(e) {
+    e.preventDefault();
+    if (UPLOAD_LINK.includes("BURAYA_")) {
+      alert("Upload-Linki henüz eklenmedi. Kurulum tamamlandığında buraya otomatik yönlendirme yapılacaktır.");
+      return;
+    }
+    window.location.href = UPLOAD_LINK;
+  }
+</script>
+</body>
+</html>
